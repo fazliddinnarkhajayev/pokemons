@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="site-header__nav">
+      <ul class="site-header__nav-list">
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link all" role="button" href="#" data-set="all">all</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Normal" role="button" href="#" data-set="Normal">Normal</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Fighting" role="button" href="#" data-set="Fighting">Fighting</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Flying" role="button" href="#" data-set="Flying">Flying</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Poison" role="button" href="#" data-set="Poison">Poison</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Ground" role="button" href="#" data-set="Ground">Ground</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Rock" role="button" href="#" data-set="Rock">Rock</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Bug" role="button" href="#" data-set="Bug">Bug</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Ghost" role="button" href="#" data-set="Ghost">Ghost</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Steel" role="button" href="#" data-set="Steel">Steel</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Fire" role="button" href="#" data-set="Fire">Fire</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Water" role="button" href="#" data-set="Water">Water</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Grass" role="button" href="#" data-set="Grass">Grass</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Electric" role="button" href="#" data-set="Electric">Electric</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Psychic" role="button" href="#" data-set="Psychic">Psychic</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Ice" role="button" href="#" data-set="Ice">Ice</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Dragon" role="button" href="#" data-set="Dragon">Dragon</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Dark" role="button" href="#" data-set="Dark">Dark</a>
+        </li>
+        <li class="site-header__nav-item">
+          <a class="site-header__nav-link Fairy" role="button" href="#" data-set="Fairy">Fairy</a>
+        </li>
+      </ul>
+    </nav>
+    <form class="site-header__form" action="post">
+      <input class="site-header__input" type="search" placeholder="Pokemon name e.g. Pikachu">
+    </form>
+  </header>
+    <!-- 1030 135-->
+<main class="site-main">
+  <ul class="main__list js-main-list">
+   <template class="main-template">
+    <li class="main__item js-main-item">
+      <img class="main__item-img js-mian-img" src="img/food-img" alt="rasm" width="130" height="130">
+      <div class="main__item-inner">
+        <h5 class="main__item-title js-name">CHARIZARD</h5>
+        <div class="main__inner-wrapper">
+         <span class="main__left-span js-pokemo-height">1.7m</span>
+         <p class="main__item-page js-pokemon-name">Flame Pokemon</p>
+         <span class="main__right-span js-pokemon-weight">90.5kg</span>
+        </div>
+        <ul class="main__item-passess">
+        <!-- <span class="span-passess span-passess--flying js-ability-left">flying</span>
+        <span class="span-passess span-passess--fire js-ability-right">fire</span>
+        <span class="span-passess span-passess--extra js-ability-right">fire</span> -->
+        </ul>
+        <div class="features">
+          <span class="features___span features___span--left js-span--left">Solar-Power</span>
+          <span class="features___span features___span--middle js-span--middle">Blaze</span>
+        </div>
+      </div>
+      <a href="#" class="stretched-link" data-toggle="modal" data-target="#exampleModal"></a>
+    </li>
+   </template>
+  </ul>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+
+  <!-- Modal -->
+  <div class="pokemon pokemon--open modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="pokemon__wrapper">
+    <button class="pokemon__header-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+          <span aria-hidden="true">&times;</span>
+        </button>
+    <div class="pokemon__dialog modal-dialog">
+      <div class="pokemon__content modal-content">
+        <!-- <div class="pokemon__header modal-header"></div> -->
+        <div class="modal-body">
+          <h3 class="pokemon__title js-pokemon__title">description</h3>
+          <p class="pokemon__text js-pokemon__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas alias, eaque explicabo eius laudantium optio quod ipsum minus. Aperiam, error deleniti!</p>
+          <h3 class="pokemon__title">evolutions</h3>
+          <ul class="pokemon__img-list js-pokemon__img-list row d-flex justify-content-around list-unstyled">
+            <li class="pokemon__img-item col-3">
+              <img class="animal-img" src="" alt="rasm" width="120px" height="120px">
+             <span class="animal-name">bulbasaur</span>
+            </li>
+            <li class="pokemon__img-item col-3">
+              <img class="animal-img" src="" alt="rasm" width="120px" height="120px">
+             <span class="animal-name">ivysaur</span>
+            </li>
+            <li class="pokemon__img-item col-3">
+              <img class="animal-img" src="" alt="rasm" width="120px" height="120px">
+             <span class="animal-name">venusaur</span>
+            </li>
+          </ul>
+          <h3 class="pokemon__title pokemon__title-extra">stats</h3>
+
+          <ul class="pokemon__stats-list">
+            <li class="pokemon__stat-item">
+              <p class="pokemon__stat-page">hp</p>
+              <span class="stats-span"><span class="stats-span-inner"></span></span>
+              <span class="pokemon__stats-span">45</span>
+            </li>
+            <li class="pokemon__stat-item">
+              <p class="pokemon__stat-page">atk</p>
+              <span class="stats-span"><span class="stats-span-inner"></span></span>
+              <span class="pokemon__stats-span">65</span>
+            </li>
+            <li class="pokemon__stat-item">
+              <p class="pokemon__stat-page">def</p>
+              <span class="stats-span"><span class="stats-span-inner"></span></span>
+              <span class="pokemon__stats-span">65</span>
+            </li>
+            <li class="pokemon__stat-item">
+              <p class="pokemon__stat-page">satk</p>
+              <span class="stats-span"><span class="stats-span-inner"></span></span>
+              <span class="pokemon__stats-span">49</span>
+            </li>
+            <li class="pokemon__stat-item">
+              <p class="pokemon__stat-page">sdef</p>
+              <span class="stats-span"><span class="stats-span-inner"></span></span>
+              <span class="pokemon__stats-span">49</span>
+            </li>
+            <li class="pokemon__stat-item">
+              <p class="pokemon__stat-page">spd</p>
+              <span class="stats-span"><span class="stats-span-inner"></span></span>
+              <span class="pokemon__stats-span">45</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/pokemons.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+  <button class="btn --all --active" disabled data-type="all" type="button">All
