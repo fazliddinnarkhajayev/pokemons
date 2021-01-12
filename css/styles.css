@@ -91,7 +91,6 @@ only screen and (                min-resolution: 2dppx) {
 .site-header__nav-link{
   display: block;
   text-decoration: none;
-  color: white;
   background-color: #fff;
   width: 100%;
   text-align: center;
@@ -109,14 +108,13 @@ only screen and (                min-resolution: 2dppx) {
   top: 0;
   left: 135px;
   width: 100%;
-  z-index: 50;
+  z-index: 51;
 }
 .site-header__input{
   padding: 8px 15px;
   width: 100%;
   border: none;
   background-color:black;
-  opacity: 0.8;
   color: white;
 }
 .site-header__input::placeholder{
@@ -125,23 +123,27 @@ only screen and (                min-resolution: 2dppx) {
 
 
 /* navigation-color */
+
 .all{
  color: black;
 }
+.Normal{
+  color:#a8a8a8 ;
+ }
 .Normal:hover{
  background-color:hsl(0, 0%, 66%,0.3) ;
 }
-.Normal:active{
+.Normal .type--active{
  background-color:hsl(0, 0%, 66%) ;
+ color: white;
 }
-.Normal{
- color:#a8a8a8 ;
-}
+
 .Fighting:hover{
  background-color:hsl(0, 100%, 50%,0.3) ;
 }
-.Fighting:active{
+.Fighting .type--active{
  background-color:hsl(0, 100%, 50%) ;
+ color: #fff;
 }
 .Fighting{
  color:red ;
@@ -149,8 +151,9 @@ only screen and (                min-resolution: 2dppx) {
 .Flying:hover{
  background-color: hsl(236, 76%, 75% ,0.3);
 }
-.Flying:active{
+.Flying .type--active{
  background-color: hsl(236, 76%, 75% );
+ color: #fff;
 }
 .Flying{
  color: #9096f0;
@@ -158,8 +161,9 @@ only screen and (                min-resolution: 2dppx) {
 .Poison:hover{
  background-color:hsl(300, 43%, 44%,0.3);
 }
-.Poison:hover{
+.Poison .typen:active{
  background-color:hsl(300, 43%, 44%);
+ color: #fff;
 }
 .Poison{
  color:#a040a0;
@@ -167,8 +171,9 @@ only screen and (                min-resolution: 2dppx) {
 .Ground:hover{
  background-color:hsl(39, 66%, 64%,0.3) ;
 }
-.Ground:active{
+.Ground .type--active{
  background-color:hsl(39, 66%, 64%) ;
+ color: #fff;
 }
 .Ground{
  color:#e0b668 ;
@@ -176,8 +181,9 @@ only screen and (                min-resolution: 2dppx) {
 .Rock:hover{
  background-color:hsl(236, 76%, 75%, 0.3) ;
 }
-.Rock:active{
+.Rock .type--active{
  background-color:hsl(236, 76%, 75%) ;
+ color: #fff;
 }
 .Rock{
  color:#9096f0 ;
@@ -185,7 +191,7 @@ only screen and (                min-resolution: 2dppx) {
 .Bug:hover{
  background-color:hsl(71, 70%, 42%, 0.3) ;
 }
-.Bug:active{
+.Bug .type--active{
  background-color:hsl(71, 70%, 42%) ;
 }
 .Bug{
@@ -194,7 +200,7 @@ only screen and (                min-resolution: 2dppx) {
 .Ghost:hover{
  background-color:hsl(263, 27%, 47%, 0.3) ;
 }
-.Ghost:active{
+.Ghost .type--active{
  background-color:hsl(263, 27%, 47%) ;
 }
 .Ghost{
@@ -203,7 +209,7 @@ only screen and (                min-resolution: 2dppx) {
 .Steel:hover{
  background-color: hsl(197, 19%, 52% ,0.3);
 }
-.Steel:active{
+.Steel .type--active{
  background-color: hsl(197, 19%, 52% );
 }
 .Steel{
@@ -212,7 +218,7 @@ only screen and (                min-resolution: 2dppx) {
 .Fire:hover{
  background-color:hsl(25, 86%, 56%, 0.3) ;
 }
-.Fire:active{
+.Fire .type--active{
  background-color:hsl(25, 86%, 56%) ;
 }
 .Fire{
@@ -221,7 +227,7 @@ only screen and (                min-resolution: 2dppx) {
 .Water:hover{
  background-color:hsl(222, 82%, 67%,0.3);
 }
-.Water:active{
+.Water .type--active{
  background-color:hsl(222, 82%, 67%);
 }
 .Water{
@@ -230,7 +236,7 @@ only screen and (                min-resolution: 2dppx) {
 .Grass:hover{
  background-color: hsl(123, 70%, 44%,0.3);
 }
-.Grass:active{
+.Grass .type--active{
  background-color: hsl(123, 70%, 44%);
 }
 .Grass{
@@ -239,7 +245,7 @@ only screen and (                min-resolution: 2dppx) {
 .Electric:hover{
  background-color: hsl(40, 50%, 51%,0.3);
 }
-.Electric:active{
+.Electric .type--active{
  background-color: hsl(40, 50%, 51%);
 }
 .Electric{
@@ -248,7 +254,7 @@ only screen and (                min-resolution: 2dppx) {
 .Psychic:hover{
  background-color: hsl(337, 83%, 55% , 0.3);
 }
-.Psychic:active{
+.Psychic .type--active{
  background-color: hsl(337, 83%, 55% );
 }
 .Psychic{
@@ -257,7 +263,7 @@ only screen and (                min-resolution: 2dppx) {
 .Ice:hover{
  background-color:hsl(180, 45%, 72% , 0.3) ;
 }
-.Ice:active{
+.Ice .type--active{
  background-color:hsl(180, 45%, 72% ) ;
 }
 .Ice{
@@ -266,7 +272,7 @@ only screen and (                min-resolution: 2dppx) {
 .Dragon:hover{
  background-color:hsl(258, 93%, 60%, 0.3) ;
 }
-.Dragon:active{
+.Dragon .type--active{
  background-color:hsl(258, 93%, 60%) ;
 }
 .Dragon{
@@ -275,7 +281,7 @@ only screen and (                min-resolution: 2dppx) {
 .Dark:hover{
  background-color:hsl(23, 9%, 29%, 0.3) ;
 }
-.Dark:active{
+.Dark .type--active{
  background-color:hsl(23, 9%, 29%) ;
 }
 .Dark{
@@ -284,11 +290,31 @@ only screen and (                min-resolution: 2dppx) {
 .Fairy:hover{
  background-color:hsl(316, 74%, 77%, 0.3) ;
 }
-.Fairy:active{
+.Fairy .type--active{
  background-color:hsl(316, 74%, 77%) ;
 }
 .Fairy{
  color:#f09ad9 ;
+}
+
+.type {
+
+}
+.type--fire {
+  color: orange;
+  background-color: black;
+}
+.type--fire.type--active {
+  background-color: orange;
+  color: black;
+}
+.type--water {
+  color: orange;
+  background-color: black;
+}
+.type--water.type--active {
+  background-color: orange;
+  color: black;
 }
 
 /* MAIN */
@@ -316,6 +342,9 @@ only screen and (                min-resolution: 2dppx) {
   border-radius: 5px;
   box-shadow: 0 0 15px #aaa;
   margin-bottom: 50px;
+  /* transform: rotateY(90deg); */
+  /* animation: 0.5s ease 1 forwards; */
+  transition: transform 0.4s ease;
 }
 .stretched-link{
   position: absolute;
@@ -332,6 +361,10 @@ only screen and (                min-resolution: 2dppx) {
   right: -80px;
   width: 130px;
   height: 130px;
+  transition: 0.3s ease;
+}
+.main__item:hover .main__item-img{
+ transform: translate(-5px ,-5px);
 }
 .main__item-inner{
   transform: translateY(-50px);
@@ -358,6 +391,8 @@ only screen and (                min-resolution: 2dppx) {
  font-size: 15px;
 }
 .main__left-span{
+  padding-left: 2px;
+  padding-right: 2px;
   background-color: #fff;
   border-radius: 5px;
   font-size: 13px;
@@ -368,10 +403,12 @@ only screen and (                min-resolution: 2dppx) {
   top: 50%;
   left: -5px;
   transform: translateY(-50%);
-  width: 50px;
+  width: 60px;
   box-shadow: -2.5px 0 0px #aaa;
 }
 .main__right-span{
+  padding-left: 2px;
+  padding-right: 2px;
   background-color: #fff;
   box-shadow: 2.5px 0 0px #aaa;
   border-radius: 5px;
@@ -383,7 +420,7 @@ only screen and (                min-resolution: 2dppx) {
   top: 50%;
   right: -5px;
   transform: translateY(-50%);
-  width: 50px;
+  width: 60px;
 }
 .span-passess{
  text-transform: uppercase;
@@ -399,6 +436,22 @@ only screen and (                min-resolution: 2dppx) {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+}
+.main__id-span{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  transform: scaleY(0);
+  transition: 0.5s ease ;
+  background-color: hsl(0, 0%, 0%, 0.5);
+}
+.main__item:hover .main__id-span{
+  transform: scaleY(1);
 }
 .span-passess--flying{
   color: #9096f0;

@@ -25,8 +25,8 @@ var createElement = function (element, elementClass, text) {
 var elMainList = document.querySelector('.js-main-list');
 var elHeaderForm = document.querySelector('.site-header__form');
 var elHeaderInput = document.querySelector('.site-header__input');
-var elHeaderLink = document.querySelectorAll('.site-header__nav-link');
-var elHeaderItem = document.querySelectorAll('.site-header__nav-item');
+var elHeaderLink = document.querySelector('.site-header__nav-link');
+var elHeaderList = document.querySelector('.site-header__nav-list');
 
 var elModalTitle =document.querySelector('.js-pokemon__title');
 var elModalTexet =document.querySelector('.js-pokemon__text');
@@ -49,6 +49,7 @@ animals.forEach(function(animal){
   $_('.js-mian-img',animalTemplate).src = animal.img;
   $_('.js-pokemo-height',animalTemplate).textContent = animal.height;
   $_('.js-pokemon-weight',animalTemplate).textContent = animal.weight;
+  $_('.js-main__id-span',animalTemplate).textContent ='#'+ animal.num;
   var elTypeFragment = document.createDocumentFragment();
 
   animal.type.forEach(function(type){
@@ -76,7 +77,6 @@ elHeaderForm.addEventListener('input',function(evt){
     return pokemon.name.toString().match(pokemonName)
 
   });
-
   var elTypeFragment = document.createDocumentFragment();
 
   filteredPokemon.forEach(function(pokemon){
@@ -86,9 +86,12 @@ elHeaderForm.addEventListener('input',function(evt){
     $_('.js-mian-img',searchTemplate).src = pokemon.img;
     $_('.js-pokemo-height',searchTemplate).textContent = pokemon.height;
     $_('.js-pokemon-weight',searchTemplate).textContent = pokemon.weight;
+    $_('.js-main__id-span',searchTemplate).textContent ='#'+ pokemon.num;
+
 
     elTypeFragment.appendChild(searchTemplate);
   });
+
   elMainList.appendChild(elTypeFragment);
 });
 
@@ -107,46 +110,46 @@ elHeaderForm.addEventListener('input',function(evt){
 
 
 
-elHeaderItem.addEventListener('click', function(evt){
-      if (evt.target.matches(a)){
-        var pokemonLink = pokemons.filter(function(pokemon){
-          return pokemon.type.includes(evt.target.dataset.type)
-        });
+elHeaderList.addEventListener('click', function(evt){
 
-      };
+  if (evt.target.matches('a')){
+    elMainList.innerHTML = '';
+    var pokemonLink = pokemons.filter(function(pokemon){
 
-      elMainList.innerHTML = '';
+      return pokemon.type.includes(evt.target.dataset.type) || evt.target.dataset.type === "all"
 
-      var  elTypeFragment = document.createDocumentFragment();
-      pokemonLink.forEach(function(pokemon){
-
-        var searchTemplate = elTemplate.cloneNode(true);
-
-        var elPassessList = searchTemplate.querySelector('.main__item-passess');
-        $_('.js-name',searchTemplate).textContent = pokemon.name;
-        $_('.js-mian-img',searchTemplate).src = pokemon.img;
-        $_('.js-pokemo-height',searchTemplate).textContent = pokemon.height;
-        $_('.js-pokemon-weight',searchTemplate).textContent = pokemon.weight;
-
-
-
-        elTypeFragment.appendChild(searchTemplate);
-
-      });
-
-      elMainList.appendChild(elTypeFragment);
-  //  console.log(elTypeFragment)
     });
+  };
 
 
+  var  elTypeFragment = document.createDocumentFragment();
+  console.log(pokemonLink);
+  pokemonLink.forEach(function(pokemon){
+
+    var linkTemplate = elTemplate.cloneNode(true);
+
+    var elPassessList = linkTemplate.querySelector('.main__item-passess');
+    $_('.js-name', linkTemplate).textContent = pokemon.name;
+    $_('.js-mian-img', linkTemplate).src = pokemon.img;
+    $_('.js-pokemo-height', linkTemplate).textContent = pokemon.height;
+    $_('.js-pokemon-weight', linkTemplate).textContent = pokemon.weight;
+    $_('.js-main__id-span',linkTemplate).textContent ='#'+ pokemon.num;
+
+    var linkFragment = document.createDocumentFragment();
+    pokemon.type.forEach(function(type){
+      var typeItem = document.createElement('li');
+      typeItem.classList.add('span-passess');
+
+      typeItem.textContent = type;
+
+      linkFragment.appendChild(typeItem);
+    });   elPassessList.appendChild(linkFragment);
 
 
-    // var linkFragment = document.createDocumentFragment();
-    // pokemon.type.forEach(function(type){
-    //   var typeItem = document.createElement('li');
-    //   typeItem.classList.add('span-passess');
+    elTypeFragment.appendChild(linkTemplate);
 
-    //   typeItem.textContent = type;
+  });
 
-    //   linkFragment.appendChild(typeItem);
-    // });   elPassessList.appendChild(linkFragment);
+  elMainList.appendChild(elTypeFragment);
+  console.log(elMainList)
+});
